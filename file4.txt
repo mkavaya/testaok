@@ -3,3 +3,399 @@ erste Zeile file 4
 
 letzte zeile
 neu
+matthias@matthias-VirtualBox:~/src/testaok$ git ststus
+git: 'ststus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+matthias@matthias-VirtualBox:~/src/testaok$ git commit -m "added new line" .
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'matthias@matthias-VirtualBox.(none)')
+matthias@matthias-VirtualBox:~/src/testaok$ git config --global user.email "matthias.kopka@web.de"
+matthias@matthias-VirtualBox:~/src/testaok$ git config --global user.name "Matthias Kopka"
+matthias@matthias-VirtualBox:~/src/testaok$ git commit -m "added new line" .
+[main fed975f] added new line
+ 1 file changed, 1 insertion(+)
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+matthias@matthias-VirtualBox:~/src/testaok$ git push
+^[[D^[[D^[[3~^[[3~^C
+matthias@matthias-VirtualBox:~/src/testaok$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 285 bytes | 285.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/mkavaya/testaok.git
+   6366b6c..fed975f  main -> main
+matthias@matthias-VirtualBox:~/src/testaok$ git push
+Everything up-to-date
+matthias@matthias-VirtualBox:~/src/testaok$ git pull 
+Already up to date.
+matthias@matthias-VirtualBox:~/src/testaok$ git ststus
+git: 'ststus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+matthias@matthias-VirtualBox:~/src/testaok$ git commit
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+matthias@matthias-VirtualBox:~/src/testaok$ git commit -m "added sec line" .
+[main 3bd2e57] added sec line
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+matthias@matthias-VirtualBox:~/src/testaok$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 302 bytes | 302.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/mkavaya/testaok.git
+   fed975f..3bd2e57  main -> main
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+matthias@matthias-VirtualBox:~/src/testaok$ git add .
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   test.txt
+
+matthias@matthias-VirtualBox:~/src/testaok$ git commit
+Aborting commit due to empty commit message.
+matthias@matthias-VirtualBox:~/src/testaok$ git commit -m "added new" .
+[main c2c71ea] added new
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+matthias@matthias-VirtualBox:~/src/testaok$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 281 bytes | 281.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/mkavaya/testaok.git
+   3bd2e57..c2c71ea  main -> main
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+matthias@matthias-VirtualBox:~/src/testaok$ git commit -m "weiter geändert" test.txt
+[main 18a1d06] weiter geändert
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+matthias@matthias-VirtualBox:~/src/testaok$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 294 bytes | 294.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/mkavaya/testaok.git
+   c2c71ea..18a1d06  main -> main
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+matthias@matthias-VirtualBox:~/src/testaok$ git add test3.txt
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   test3.txt
+
+matthias@matthias-VirtualBox:~/src/testaok$ git push
+Everything up-to-date
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Test 4
+        new file:   test3.txt
+
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Test 4
+        new file:   test3.txt
+
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Test 4
+        new file:   test3.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Test 4
+
+matthias@matthias-VirtualBox:~/src/testaok$ git push
+Everything up-to-date
+matthias@matthias-VirtualBox:~/src/testaok$ git commit -m "weiter geändert" . 
+[main bdcb1c7] weiter geändert
+ 2 files changed, 8 insertions(+)
+ create mode 100644 Test 4
+ create mode 100644 test3.txt
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+matthias@matthias-VirtualBox:~/src/testaok$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 403 bytes | 100.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/mkavaya/testaok.git
+   18a1d06..bdcb1c7  main -> main
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Test 4
+
+no changes added to commit (use "git add" and/or "git commit -a")
+matthias@matthias-VirtualBox:~/src/testaok$ git push
+Everything up-to-date
+matthias@matthias-VirtualBox:~/src/testaok$ git commit -m "wieder dazugefügt" .
+[main 791960c] wieder dazugefügt
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Test 4
+
+no changes added to commit (use "git add" and/or "git commit -a")
+matthias@matthias-VirtualBox:~/src/testaok$ git add Test 4
+fatal: pathspec 'Test' did not match any files
+matthias@matthias-VirtualBox:~/src/testaok$ status
+
+Command 'status' not found, did you mean:
+
+  command 'statup' from snap statup (0.79.91)
+  command 'statfs' from deb gocryptfs (1.7.1-1)
+  command 'qstatus' from deb gridengine-client (8.1.9+dfsg-9build2)
+  command 'states' from deb enscript (1.6.5.90-3)
+
+See 'snap info <snapname>' for additional versions.
+
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    Test 4
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Test31
+
+no changes added to commit (use "git add" and/or "git commit -a")
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    Test 4
+        new file:   Test31
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    Test31
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Test31.txt
+
+matthias@matthias-VirtualBox:~/src/testaok$ git add Test31.txt
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    Test 4
+        new file:   Test31
+        new file:   Test31.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    Test31
+
+matthias@matthias-VirtualBox:~/src/testaok$ git commit -m "weiter" 
+[main ccec787] weiter
+ 3 files changed, 5 insertions(+), 4 deletions(-)
+ delete mode 100644 Test 4
+ create mode 100644 Test31
+ create mode 100644 Test31.txt
+matthias@matthias-VirtualBox:~/src/testaok$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 670 bytes | 167.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/mkavaya/testaok.git
+   bdcb1c7..ccec787  main -> main
+matthias@matthias-VirtualBox:~/src/testaok$ git push
+Everything up-to-date
+matthias@matthias-VirtualBox:~/src/testaok$ git commit -m "17:51" .
+[main 742cd0c] 17:51
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ delete mode 100644 Test31
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+matthias@matthias-VirtualBox:~/src/testaok$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 297 bytes | 297.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/mkavaya/testaok.git
+   ccec787..742cd0c  main -> main
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+matthias@matthias-VirtualBox:~/src/testaok$ commit -m "commit" .
+commit: command not found
+matthias@matthias-VirtualBox:~/src/testaok$ git commit -m "commit" .
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file4.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+matthias@matthias-VirtualBox:~/src/testaok$ git add file4.txt
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file4.txt
+
+matthias@matthias-VirtualBox:~/src/testaok$ git push
+Everything up-to-date
+matthias@matthias-VirtualBox:~/src/testaok$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file4.txt
+
+matthias@matthias-VirtualBox:~/src/testaok$ git commit -a "fil4neu" .
+fatal: paths 'fil4neu ...' with -a does not make sense
+matthias@matthias-VirtualBox:~/src/testaok$ git commit -m "fil4neu" .
+[main 6d2590d] fil4neu
+ 1 file changed, 4 insertions(+)
+ create mode 100644 file4.txt
+matthias@matthias-VirtualBox:~/src/testaok$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 296 bytes | 296.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/mkavaya/testaok.git
+   742cd0c..6d2590d  main -> main
+matthias@matthias-VirtualBox:~/src/testaok$ git commit -m "2-Schritt" .
+[main f2e961d] 2-Schritt
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+matthias@matthias-VirtualBox:~/src/testaok$ ^C
+matthias@matthias-VirtualBox:~/src/testaok$ ^C
+matthias@matthias-VirtualBox:~/src/testaok$ 
