@@ -1,0 +1,4 @@
+file4
+erste Zeile file 4
+
+letzte zeile
