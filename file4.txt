@@ -399,3 +399,4 @@ matthias@matthias-VirtualBox:~/src/testaok$ git commit -m "2-Schritt" .
 matthias@matthias-VirtualBox:~/src/testaok$ ^C
 matthias@matthias-VirtualBox:~/src/testaok$ ^C
 matthias@matthias-VirtualBox:~/src/testaok$ 
+vorletzte Zeile
